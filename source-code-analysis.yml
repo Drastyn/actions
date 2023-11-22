@@ -1,0 +1,10 @@
+on:
+  workflow_call:
+
+jobs:
+  sonarcloud:
+    runs-on: ubuntu-latest
+    steps:
+      name: main
+      script: |
+        echo "hello world"
