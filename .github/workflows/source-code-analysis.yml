@@ -1,10 +1,12 @@
 on:
   workflow_call:
 
+name: "source-copde-analysis"
 jobs:
   sonarcloud:
     runs-on: ubuntu-latest
     steps:
-      name: main
-      script: |
-        echo "hello world"
+    - name: main
+      with:
+        script: |
+          echo "hello world"
