@@ -7,6 +7,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: main
-      with:
-        script: |
+      run: |
           echo "hello world"
