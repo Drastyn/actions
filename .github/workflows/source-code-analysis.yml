@@ -1,11 +1,15 @@
 on:
   workflow_call:
 
-name: "source-copde-analysis"
+name: "source-code-analysis"
 jobs:
   sonarcloud:
     runs-on: ubuntu-latest
     steps:
-    - name: main
-      run: |
-        echo "hello world"
+    - uses: actions/checkout@v3
+    
+    - name: scan
+      uses: sonarsource/sonarcloud-github-action@v2.0.2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: 45b9f583ae71500e53909db74de3ad2df023528a
