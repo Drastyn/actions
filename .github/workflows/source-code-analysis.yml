@@ -1,5 +1,8 @@
 on:
   workflow_call:
+    secrets:
+      SONAR_TOKEN:
+        required: true
     
 name: "source-code-analysis"
 jobs:
@@ -12,4 +15,4 @@ jobs:
       uses: sonarsource/sonarcloud-github-action@v2.0.2
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: 45b9f583ae71500e53909db74de3ad2df023528a
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
