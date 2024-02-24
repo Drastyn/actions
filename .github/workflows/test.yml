@@ -11,6 +11,7 @@ jobs:
         with: 
           name: Drastyn/actions
           ref: refs/heads/test-file-action-call
+          token: ${{ secrets.PAT }}
 
 
       - name: run-sh
