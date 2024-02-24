@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@master
         with: 
           repository: Drastyn/actions
           ref: refs/heads/test-file-action-call
