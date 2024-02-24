@@ -20,5 +20,5 @@ jobs:
       - name: run-sh
         run: |
           chmod +x /helpers/test.sh
-          ./helpers/test.sh
+          .$HOME/actions/helpers/test.sh
         shell: bash
