@@ -21,6 +21,6 @@ jobs:
         run: |
           pwd
           ls
-          chmod +x $HOME/actions/helpers/test.sh
-          .$HOME/actions/helpers/test.sh
+          chmod +x helpers/test.sh
+          ./helpers/test.sh
         shell: bash
