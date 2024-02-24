@@ -4,7 +4,7 @@ on:
 name: "run-sh"
 jobs:
   testing:
-  runs-on: ubuntu-lates
+    runs-on: ubuntu-lates
 
   steps:
     - name: run-sh
