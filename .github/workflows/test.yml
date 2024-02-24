@@ -8,7 +8,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      
+          with: 
+            name: Drastyn/actions
+            ref: refs/heads/test-file-action-call
+
+
       - name: run-sh
         run: |
           chmod +x /helpers/test.sh
