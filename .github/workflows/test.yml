@@ -19,8 +19,6 @@ jobs:
 
       - name: run-sh
         run: |
-          pwd
-          ls
           chmod +x helpers/test.sh
           ./helpers/test.sh
         shell: bash
