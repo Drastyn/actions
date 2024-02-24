@@ -6,9 +6,9 @@ jobs:
   testing:
     runs-on: ubuntu-lates
 
-  steps:
-    - name: run-sh
-      run: |
-        chmod +x /helpers/test.sh
-        ./helpers/test.sh
-      shell: bash
+    steps:
+      - name: run-sh
+        run: |
+          chmod +x /helpers/test.sh
+          ./helpers/test.sh
+        shell: bash
