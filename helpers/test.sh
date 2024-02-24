@@ -5,4 +5,4 @@ main() {
     whoami
 }
 
-main#!/bin/bash
+main

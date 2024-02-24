@@ -1,0 +1,14 @@
+on:
+  workflow_call:
+
+name: "run-sh"
+jobs:
+  testing:
+  runs-on: ubuntu-lates
+
+  steps:
+    - name: run-sh
+      run: |
+        chmod +x /helpers/test.sh
+        ./helpers/test.sh
+      shell: bash
