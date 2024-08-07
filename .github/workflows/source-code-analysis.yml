@@ -8,12 +8,13 @@ name: "source-code-analysis"
 jobs:
   sourceCodeAnalysis:
     runs-on: ubuntu-latest
+    container: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4.1.7
     
     - name: scan
       uses: sonarsource/sonarcloud-github-action@v2.0.2
