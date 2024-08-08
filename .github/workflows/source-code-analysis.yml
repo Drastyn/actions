@@ -18,9 +18,15 @@ jobs:
       with:
         ref: ${{ github.ref_name }}
 
+    - name: Set Sonar Branch
+      run: |
+        if [[ ${{ github.ref_name }} != "main" || ${{ github.ref_name }} != "master" ]]; then
+          echo "SONAR_BRANCH=${{ github.ref_name }}" >> $GITHUB_ENV
+        fi
+
     - name: scan
       uses: sonarsource/sonarcloud-github-action@v2.0.2
       with:
         args: >
           -Dsonar.sources=.
-          -Dsonar.branch.name=${{ github.ref_name }}
+          -Dsonar.branch.name=${{ env.SONAR_BRANCH }}
