@@ -8,7 +8,7 @@ name: "source-code-analysis"
 jobs:
   sourceCodeAnalysis:
     runs-on: ubuntu-latest
-    container: ubuntu-latest
+    container: ubuntu:latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
