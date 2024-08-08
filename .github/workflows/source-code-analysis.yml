@@ -15,6 +15,7 @@ jobs:
       
     steps:
     - uses: actions/checkout@v4.1.7
+      ref: ${{ github.ref }}
     
     - name: scan
       uses: sonarsource/sonarcloud-github-action@v2.0.2
