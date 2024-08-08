@@ -23,4 +23,4 @@ jobs:
       with:
         args: >
           -Dsonar.sources=.
-          -Dsonar.sonar.branch.name=${{ github.ref_name }}
+          -Dsonar.branch.name=${{ github.ref_name }}
