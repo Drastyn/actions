@@ -18,8 +18,8 @@ jobs:
       with:
         ref: ${{ github.ref_name }}
 
-    - name: Set current branch
-      run: echo "SONAR_BRANCH=${{ $github.ref_name }} " >> $GITHUB_ENV
+    - name: Set Sonar Branch
+      run: echo "SONAR_BRANCH=${{ github.ref_name }} " >> $GITHUB_ENV
 
     - name: scan
       uses: sonarsource/sonarcloud-github-action@v2.0.2
