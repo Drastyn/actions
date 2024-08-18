@@ -1,0 +1,12 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  matrix-job:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        animal: [cat, dog, bear]
+        color: [black, brown]
+    steps:
+      - run: echo "Hello ${{ matrix.color }} ${{ matrix.animal }}"
