@@ -20,7 +20,6 @@ jobs:
       with:
         java-version: ${{env.JAVA_VERSION}}
         distribution: 'zulu'
-        cache: maven
     - name: Print name
       run: echo "Hello $NAME. $BUILD. Using Java Version $JAVA_VERSION"
       env:
